@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Result>
+<h1>Dogs data being considered for drug analysis</h1>
+<hr />
+
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <th>Gender</th>
+        <th>Age in years</th>
+        <th>Weight in pound</th>
+        
+        <th>Active Ingredient in Drug</th>
+
+    </tr>
+
+    @foreach (var d in Model)
+    {
+<tr>
+    <td>@d.animal.gender</td>
+    <td>@d.animal.age.min</td>
+    <td>@d.animal.weight.min</td>
+    @*@foreach (var a in d.animal.breed)
+    {
+        <td>@d.animal.breed.breed_component</td>
+    }*@
+        @foreach (var a in d.drug)
+    {
+
+
+            @foreach (var e in a.active_ingredients)
+    {
+                <td>@e.name</td>
+    }
+    }
+
+    </tr>
+        
+
+    }
+</table>
+
+<script>
+ //   alertDbSave(@ViewBag.dbSuccessComp);
+</script>

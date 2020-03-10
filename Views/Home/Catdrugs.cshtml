@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Result>
+<h1>Drug ingredient affecting the cats</h1>
+<hr />
+
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <th>Ingredient</th>
+    </tr>
+
+@foreach (var d in Model)
+ {
+<tr>
+    @foreach (var a in d.drug)
+    {
+
+
+        @foreach (var e in a.active_ingredients)
+        {
+            <td>@e.name</td>
+        }
+    }
+        
+
+    </tr>
+
+ }
+       
+</table>
+
+<script>
+ //   alertDbSave(@ViewBag.dbSuccessComp);
+</script>

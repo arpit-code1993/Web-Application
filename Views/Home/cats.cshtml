@@ -1,0 +1,50 @@
+﻿@*@model IEnumerable<Assignment_4.Models.Cats>*@
+
+
+
+<h2>Symbols</h2>
+<hr />
+
+@*<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.species)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.female_animal_physiological_status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.reproductive_status)
+            </th>
+            
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.species)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.female_animal_physiological_status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.reproductive_status)
+                </td>
+              
+            </tr>
+        }
+    </tbody>
+</table>*@
+<script>
+    alertDbSave(@ViewBag.dbSuccessComp);
+</script>
